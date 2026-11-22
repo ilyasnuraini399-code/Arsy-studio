@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arsy Video Web App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f2f5;
+        }
+        .container {
+            position: relative;
+            width: 360px;
+            height: 640px;
+            background: #000;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        .watermark {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            color: rgba(255,255,255,0.5);
+            font-weight: bold;
+            font-size: 14px;
+            pointer-events: none;
+        }
+        video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        h1 {
+            color: #1a73e8;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Arsy Video Preview</h1>
+    <div class="container">
+        <!-- Video source will be the rendered Remotion video -->
+        <video controls autoplay loop muted>
+            <source src="out/video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="watermark">arsy</div>
+    </div>
+</body>
+</html>
