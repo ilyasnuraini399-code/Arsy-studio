@@ -23,6 +23,7 @@ jobs:
 
       - name: Generate TTS
         run: |
+          mkdir -p public
           edge-tts --text "Halo Arsy, selamat datang di video 9 banding 16 ini." --write-media public/tts.mp3
 
       - name: Set up Node.js
